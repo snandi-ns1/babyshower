@@ -12,14 +12,14 @@ app.post('/send-email', (req, res) => {
     const transporter = nodemailer.createTransport({
         service: 'SendGrid', // Or any other service you prefer
         auth: {
-            user: 'US31003c21da401128cf5c7d54a4184246',
-            pass: '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',
+            user: 'nandi67+sendgrid@gmail.com',
+            pass: SENDGRID_API_KEY,
         },
     });
 
     const mailOptions = {
-        from: 'nandi67@gmail.com.com',
-        to: 'nandi67@gmail.com.com',
+        from: 'nandi67@gmail.com',
+        to: 'nandi67@gmail.com',
         subject: 'Your Captured Photos',
         text: 'Here are your captured photos!',
         attachments: photos.map((photo, index) => ({
